@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.wrapper{
+    flex: 1;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-body{
+    border: 1px solid red;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vh;
+    width: 100%;
+}
+
+.calc-body{
+    border: 1px solid;
+    width: 50vh;
+    height: 50vh;
+}
+
+.footer{
+    border: 1px solid;
+    margin: auto;
+    text-align: center;
+}

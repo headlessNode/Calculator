@@ -45,9 +45,6 @@ const populateDisplay = (e) => {
         buttonPressed = e.key;
     }
 
-
-    console.log(buttonPressed);
-
     if(buttonPressed >= 0 && buttonPressed <= 9){
         
         if(operator === ''){
@@ -64,7 +61,14 @@ const populateDisplay = (e) => {
 
     else if(buttonPressed === '+' || buttonPressed === '-' || buttonPressed === '*' || buttonPressed === '/'){
 
-        if(secondNumber === ''){
+
+        if(firstNumber === ''){
+            firstNumber = '0';
+            operator = buttonPressed;
+            display = firstNumber + operator;
+        }
+
+        else if(secondNumber === ''){
             operator = buttonPressed;
             display += operator;
             decimalAllowed = true;

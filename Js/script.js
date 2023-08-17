@@ -4,7 +4,6 @@ let firstNumber = '';
 let secondNumber = '';
 let operator = '';
 let display = '';
-let numbersCounter = 0;
 let decimalAllowed = true;
 
 

@@ -34,6 +34,10 @@ const operate = (firstNumber, operator, secondNumber) => {
     }
 }
 
+const formatScientificNotation = (number) => {
+    const exponentialNotation = number.toExponential(2);
+    return exponentialNotation;
+};
 
 //DISPLAY FUNCTION
 const populateDisplay = (e) => {
@@ -44,17 +48,31 @@ const populateDisplay = (e) => {
     } else if (e.type.startsWith('key')) {
         buttonPressed = e.key;
     }
-
     if(buttonPressed >= 0 && buttonPressed <= 9){
         
         if(operator === ''){
             firstNumber += buttonPressed;
-            display = firstNumber;
+            const scientificLimit = 1e35;
+            if (firstNumber >= scientificLimit) {
+                firstNumber = formatScientificNotation(parseFloat(firstNumber));
+                display = firstNumber;
+            }
+            else{
+                display = firstNumber;
+            }
+            
             
         }
         else{
             secondNumber += buttonPressed;
-            display = firstNumber + operator + secondNumber;
+            const scientificLimit = 1e9;
+            if (secondNumber >= scientificLimit) {
+                secondNumber = formatScientificNotation(parseFloat(secondNumber));
+                display = firstNumber + operator + secondNumber;
+            }
+            else{
+                display = firstNumber + operator + secondNumber;
+            }
             
         }
     }

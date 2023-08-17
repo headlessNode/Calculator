@@ -1,4 +1,4 @@
-# Basic Calculator
+# Calculator
 
 A simple web-based calculator application that performs basic arithmetic operations such as addition, subtraction, multiplication, and division. This calculator is designed with user-friendly interfaces for both mouse and keyboard input.
 
